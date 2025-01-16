@@ -3132,13 +3132,78 @@ input, select, textarea {
 		padding: 0em 0 6em 0 ;
 	}
 
-		@media screen and (max-width: 736px) {
+/* 		@media screen and (max-width: 736px) {
 
 			#main {
 				padding: 0em 0 4em 0 ;
 			}
 
-		}
+		} */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;  /* 优雅简洁的字体 */
+    background-color: #f4f4f4; /* 浅灰色背景 */
+    color: #333; /* 深灰色文字 */
+    line-height:1.7;
+}
+
+/* 页面主要内容区域 */
+.course-details {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+    padding: 30px 30px;
+    background: #e1ece3;  /* 白色背景，显得简洁干净 */
+    border-radius: 30px;  /* 圆角，增加现代感 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* 细腻的阴影效果 */
+    max-width: 800px;
+    margin: 90px auto;  /* 居中显示 */
+}
+
+/* 每个课程项目的样式 */
+.course-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* 水平居中 */
+    justify-content: center;  
+    padding: 30px 50px 10px 50px;  /* 内边距，增加上下间距 */
+    position: relative;  /* 为伪元素提供定位基础 */
+    margin-bottom: 10px;  /* 保持课程项目之间的间距 */
+    min-height: 120px;  /* 确保足够的空间容纳文字和线条 */
+}
+
+/* 伪元素：线条 */
+.course-item::before {
+    content: '';  /* 添加伪元素 */
+    position: absolute;
+    left: 0;  /* 线条从左侧开始 */
+    top: 50%;  /* 线条垂直居中 */
+    width: 5px;  /* 线条宽度 */
+    height: 100%;  /* 线条高度（调节长度） */
+    background-color: #2c3e50;  /* 深蓝色 */
+    transform: translateY(-50%);  /* 精确地将线条垂直居中 */
+}
+
+
+
+
+
+.course-item:hover {
+    background-color: #ecf0f1; /* 鼠标悬停时改变背景色 */
+    transform: translateY(-5px); /* 小幅度的悬浮效果 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 加大阴影效果 */
+}
+
+
+
+/* 价格样式 */
+.price {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #223558;  
+    margin-top: 1.5px;
+	font-weight: bold;
+}
 
 /* Footer */
 
